@@ -9,58 +9,46 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: "微软雅黑", sans-serif;
         }
-
         body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #f0f4f8;
-            gap: 30px;
+            background: #111;
+            gap: 40px;
         }
-
         h1 {
-            color: #2d3748;
-            text-align: center;
+            color: #ff4444;
+            font-size: 42px;
         }
-
-        #interactiveBtn {
-            padding: 16px 40px;
-            font-size: 18px;
+        #btn {
+            padding: 18px 50px;
+            font-size: 20px;
             font-weight: bold;
-            color: white;
-            background-color: #e63946;
+            color: #fff;
+            background: #ff3333;
             border: none;
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
-
-        #interactiveBtn:hover {
-            background-color: #c1121f;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-
-        #interactiveBtn:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        #btn:hover {
+            background: #dd2222;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <h1>火影忍者生平</h1>
-    <button id="interactiveBtn">选择忍者</button>
+    <button id="btn">选择忍者</button>
 
     <script>
-        const btn = document.getElementById('interactiveBtn');
-        btn.addEventListener('click', function() {
-            window.location.href = "https://www.baidu.com";
-        });
+        document.getElementById("btn").onclick = function(){
+            location.href = "ninja.html";
+        }
     </script>
 </body>
 </html>
