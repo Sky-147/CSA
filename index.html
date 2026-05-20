@@ -37,46 +37,30 @@
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0.1);
         }
 
         #interactiveBtn:hover {
             background-color: #3182ce;
             transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 12px rgba(0,0,0.15);
         }
 
         #interactiveBtn:active {
             transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        #message {
-            font-size: 20px;
-            color: #2d3748;
-            height: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0.1);
         }
     </style>
 </head>
 <body>
     <h1>忍者选择系统</h1>
-    
-    <!-- 已修改按钮文字 -->
     <button id="interactiveBtn">选择你的忍者</button>
-
-    <div id="message"></div>
 
     <script>
         const btn = document.getElementById('interactiveBtn');
-        const msg = document.getElementById('message');
-        let count = 0;
-
         btn.addEventListener('click', function() {
-            count++;
-            msg.textContent = `已选择忍者，累计选择 ${count} 次`;
-            const colors = ['#4299e1', '#38b2ac', '#667eea', '#f687b3', '#48bb78'];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            btn.style.backgroundColor = randomColor;
+            // 把这里换成你要跳转的网址
+            window.location.href = "https://www.baidu.com";
         });
     </script>
 </body>
