@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>交互式按钮网页</title>
+    <title>忍者选择页面</title>
     <style>
-        /* 页面整体样式 */
         * {
             margin: 0;
             padding: 0;
@@ -28,7 +27,6 @@
             text-align: center;
         }
 
-        /* 核心：漂亮的交互按钮 */
         #interactiveBtn {
             padding: 16px 40px;
             font-size: 18px;
@@ -42,20 +40,17 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        /* 鼠标悬停效果 */
         #interactiveBtn:hover {
             background-color: #3182ce;
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        /* 点击按下效果 */
         #interactiveBtn:active {
             transform: translateY(0);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* 点击后的提示文字 */
         #message {
             font-size: 20px;
             color: #2d3748;
@@ -64,30 +59,21 @@
     </style>
 </head>
 <body>
-    <h1>交互式按钮演示</h1>
+    <h1>忍者选择系统</h1>
     
-    <!-- 交互按钮 -->
-    <button id="interactiveBtn">点我试试！</button>
+    <!-- 已修改按钮文字 -->
+    <button id="interactiveBtn">选择你的忍者</button>
 
-    <!-- 点击后显示的提示 -->
     <div id="message"></div>
 
     <script>
-        // 获取按钮和提示元素
         const btn = document.getElementById('interactiveBtn');
         const msg = document.getElementById('message');
-
-        // 点击次数记录
         let count = 0;
 
-        // 按钮点击交互事件
         btn.addEventListener('click', function() {
-            count++; // 每次点击计数+1
-            
-            // 修改提示文字
-            msg.textContent = `你已经点击了 ${count} 次！按钮超听话～`;
-
-            // 随机改变按钮颜色
+            count++;
+            msg.textContent = `已选择忍者，累计选择 ${count} 次`;
             const colors = ['#4299e1', '#38b2ac', '#667eea', '#f687b3', '#48bb78'];
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
             btn.style.backgroundColor = randomColor;
