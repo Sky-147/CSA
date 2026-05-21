@@ -42,21 +42,20 @@
             text-align: center;
             margin-bottom: 50px;
         }
-        /* 网格布局 */
         .img-container{
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
-            max-width: 1600px;
+            max-width: 1400px;
             margin: 0 auto;
         }
-        /* 图片框：480px × 480px 正方形 */
+        /* 改为250*250尺寸 */
         .img-item{
-            width: 480px;
-            height: 480px;
+            width: 250px;
+            height: 250px;
             background: #333;
             border: 2px dashed #ffaa00;
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,7 +66,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 6px;
         }
     </style>
 </head>
@@ -77,14 +76,12 @@
     <div id="text"></div>
 
     <div class="img-container">
-        <!-- 第1行 -->
         <div class="img-item"><img src="双神威卡卡西(1).png" alt="双神威卡卡西"></div>
         <div class="img-item"><img src="天道超(1).png" alt="天道超"></div>
         <div class="img-item"><img src="带土(1).png" alt="带土"></div>
         <div class="img-item"><img src="止水(1).png" alt="止水"></div>
         <div class="img-item"><img src="死二(1).png" alt="死二"></div>
 
-        <!-- 第2行 -->
         <div class="img-item"><img src="死柱(1).png" alt="死柱"></div>
         <div class="img-item"><img src="死水(1).png" alt="死水"></div>
         <div class="img-item"><img src="永恒佐助(1).png" alt="永恒佐助"></div>
