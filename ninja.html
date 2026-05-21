@@ -22,7 +22,7 @@
             margin-bottom: 40px;
         }
         #text {
-            display: none; /* 隐藏文字区域 */
+            display: none;
         }
         .img-container{
             display: grid;
@@ -45,7 +45,6 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-        /* 只保留悬浮发光效果 */
         .img-item:hover{
             transform: scale(1.05);
             border-color: #ffdd00;
@@ -65,21 +64,27 @@
     <div id="text"></div>
 
     <div class="img-container">
-        <div class="img-item" data-name="双神威旗木卡卡西" onclick="location.href='kaxi.html'"><img src="双神威卡卡西(1).png" alt=""></div>
-        <div class="img-item" data-name="天道超" onclick="location.href='tiandao.html'"><img src="天道超(1).png" alt=""></div>
-        <div class="img-item" data-name="宇智波带土" onclick="location.href='daitu.html'"><img src="带土(1).png" alt=""></div>
-        <div class="img-item" data-name="宇智波止水" onclick="location.href='zhishui.html'"><img src="止水(1).png" alt=""></div>
-        <div class="img-item" data-name="秽土转生千手扉间" onclick="location.href='sier.html'"><img src="死二(1).png" alt=""></div>
+        <!-- 跳转 a.html -->
+        <div class="img-item" onclick="location.href='a.html'"><img src="双神威卡卡西(1).png" alt=""></div>
+        <!-- 跳转 b.html -->
+        <div class="img-item" onclick="location.href='b.html'"><img src="天道超(1).png" alt=""></div>
+        <!-- 跳转 c.html -->
+        <div class="img-item" onclick="location.href='c.html'"><img src="带土(1).png" alt=""></div>
+        <!-- 跳转 d.html -->
+        <div class="img-item" onclick="location.href='d.html'"><img src="止水(1).png" alt=""></div>
+        <!-- 跳转 e.html -->
+        <div class="img-item" onclick="location.href='e.html'"><img src="死二(1).png" alt=""></div>
 
-        <div class="img-item" data-name="秽土转生千手柱间" onclick="location.href='sizhu.html'"><img src="死柱(1).png" alt=""></div>
-        <div class="img-item" data-name="秽土转生波风水门" onclick="location.href='sishui.html'"><img src="死水(1).png" alt=""></div>
-        <div class="img-item" data-name="宇智波佐助永恒万花筒" onclick="location.href='zuozhu.html'"><img src="永恒佐助(1).png" alt=""></div>
-        <div class="img-item" data-name="宇智波斑白面具" onclick="location.href='baimianju.html'"><img src="白面具(1).png" alt=""></div>
-        <div class="img-item" data-name="秽土转生宇智波鼬" onclick="location.href='you.html'"><img src="鼬(1).png" alt=""></div>
+        <!-- 跳转 f.html -->
+        <div class="img-item" onclick="location.href='f.html'"><img src="死柱(1).png" alt=""></div>
+        <!-- 跳转 g.html -->
+        <div class="img-item" onclick="location.href='g.html'"><img src="死水(1).png" alt=""></div>
+        <!-- 跳转 h.html -->
+        <div class="img-item" onclick="location.href='h.html'"><img src="永恒佐助(1).png" alt=""></div>
+        <!-- 跳转 i.html -->
+        <div class="img-item" onclick="location.href='i.html'"><img src="白面具(1).png" alt=""></div>
+        <!-- 跳转 j.html -->
+        <div class="img-item" onclick="location.href='j.html'"><img src="鼬(1).png" alt=""></div>
     </div>
-
-    <script>
-        // 已移除点击更新文字的代码
-    </script>
 </body>
 </html>
