@@ -46,10 +46,10 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
-            max-width: 1400px;
+            max-width: 900px;
             margin: 0 auto;
         }
-        /* 改为250*250尺寸 */
+        /* 尺寸改为150*150 */
         .img-item{
             width: 150px;
             height: 150px;
@@ -61,12 +61,20 @@
             justify-content: center;
             color: #ccc;
             overflow: hidden;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .img-item:hover{
+            transform: scale(1.05);
+            border-color: #ffdd00;
+            box-shadow: 0 0 15px #ffaa00;
         }
         .img-item img{
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 6px;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -76,23 +84,32 @@
     <div id="text"></div>
 
     <div class="img-container">
-        <div class="img-item"><img src="双神威卡卡西(1).png" alt="双神威卡卡西"></div>
-        <div class="img-item"><img src="天道超(1).png" alt="天道超"></div>
-        <div class="img-item"><img src="带土(1).png" alt="带土"></div>
-        <div class="img-item"><img src="止水(1).png" alt="止水"></div>
-        <div class="img-item"><img src="死二(1).png" alt="死二"></div>
+        <div class="img-item" data-name="双神威卡卡西"><img src="双神威卡卡西(1).png" alt=""></div>
+        <div class="img-item" data-name="天道超"><img src="天道超(1).png" alt=""></div>
+        <div class="img-item" data-name="带土"><img src="带土(1).png" alt=""></div>
+        <div class="img-item" data-name="止水"><img src="止水(1).png" alt=""></div>
+        <div class="img-item" data-name="死二"><img src="死二(1).png" alt=""></div>
 
-        <div class="img-item"><img src="死柱(1).png" alt="死柱"></div>
-        <div class="img-item"><img src="死水(1).png" alt="死水"></div>
-        <div class="img-item"><img src="永恒佐助(1).png" alt="永恒佐助"></div>
-        <div class="img-item"><img src="白面具(1).png" alt="白面具"></div>
-        <div class="img-item"><img src="鼬(1).png" alt="鼬"></div>
+        <div class="img-item" data-name="死柱"><img src="死柱(1).png" alt=""></div>
+        <div class="img-item" data-name="死水"><img src="死水(1).png" alt=""></div>
+        <div class="img-item" data-name="永恒佐助"><img src="永恒佐助(1).png" alt=""></div>
+        <div class="img-item" data-name="白面具"><img src="白面具(1).png" alt=""></div>
+        <div class="img-item" data-name="鼬"><img src="鼬(1).png" alt=""></div>
     </div>
 
     <script>
         let txt = document.getElementById("text");
         document.querySelector(".box-btn").addEventListener("click",()=>{
             txt.innerText = "成功解锁专属忍者身份！";
+        });
+
+        const imgs = document.querySelectorAll('.img-item');
+        imgs.forEach(item=>{
+            item.addEventListener('click',function(){
+                let name = this.dataset.name;
+                alert(`你选中了：${name}`);
+                txt.innerText = `已选择忍者：${name}`;
+            })
         })
     </script>
 </body>
